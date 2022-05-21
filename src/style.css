@@ -1,0 +1,190 @@
+body {
+  margin: 10px;
+
+  font-family: "Roboto", sans-serif;
+
+  background-image: url("media/sky.jpg");
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+h2 {
+  font-size: 19px;
+  padding: 2px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+}
+
+section {
+  border: 2px solid gray;
+  border-radius: 50% 50%;
+  margin: 45px 90px;
+  padding: 60px 0px;
+
+  box-shadow: 1px 1px 5px gray;
+}
+
+h4 {
+  text-align: center;
+  margin: 100px;
+  font-weight: lighter;
+  font-size: 18px;
+  color: #40291f;
+}
+
+.coder {
+  text-decoration: none;
+  color: #198754;
+}
+.coder:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 580px;
+  border: 40px;
+}
+
+.locator {
+  margin: 40px auto;
+  display: inline-block;
+}
+
+.current {
+  position: relative;
+  display: block;
+  margin-top: -94px;
+  margin-left: 382px;
+  margin-bottom: 60px;
+  padding: 13px;
+  border: 1px solid #f8f9fa;
+  border-radius: 5px;
+  background: #f8f9fa;
+  color: rgb(90, 88, 88);
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  cursor: pointer;
+}
+
+.current:hover {
+  background-color: #198754;
+  color: #dee2e6;
+  border: 1px solid #198754;
+}
+
+.mainDate {
+  font-size: 21px;
+  color: rgb(90, 88, 88);
+}
+
+.mainDay {
+  font-size: 24px;
+}
+
+.mainDescription {
+  font-size: 24px;
+  color: rgb(90, 88, 88);
+}
+
+.temperature {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.units {
+  position: relative;
+  top: -32px;
+  font-size: 20px;
+}
+
+.highLow {
+  margin: 5px;
+  font-weight: bold;
+}
+.high {
+  font-weight: bold;
+  color: rgb(113, 5, 5);
+}
+
+.highF {
+  color: rgb(68, 66, 66);
+  font-weight: 400;
+}
+
+.low {
+  font-weight: bold;
+  color: rgb(5, 5, 116);
+  padding-left: 10px;
+}
+
+.lowF {
+  color: rgb(68, 66, 66);
+  font-weight: 400;
+}
+.precipitation {
+  margin: 10px;
+  font-weight: bold;
+}
+.moisture {
+  font-weight: bolder;
+}
+
+.percent {
+  color: rgb(68, 66, 66);
+  font-weight: 400;
+}
+
+.viento {
+  font-weight: bolder;
+}
+
+.wind {
+  margin: 5px;
+  font-weight: bold;
+}
+
+.speed {
+  color: rgb(68, 66, 66);
+  font-weight: 400;
+}
+
+.col {
+  text-align: center;
+  border-right: 3px solid rgb(68, 66, 66);
+  border-right-width: 1px;
+}
+
+.day {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.date {
+  font-size: 17px;
+  font-weight: 400;
+  margin: 4px auto;
+  color: rgb(90, 88, 88);
+}
+
+.temp {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 6px auto 15px;
+}
+
+.weatherEmoji {
+  font-size: 45px;
+}
