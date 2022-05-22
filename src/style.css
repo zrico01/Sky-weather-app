@@ -7,6 +7,7 @@ body {
 h1,
 h2 {
   text-align: center;
+  text-transform: capitalize;
 }
 h2 {
   font-size: 19px;
@@ -101,6 +102,7 @@ h4 {
 .mainDescription {
   font-size: 24px;
   color: rgb(90, 88, 88);
+  text-transform: capitalize;
 }
 
 .temperature {
