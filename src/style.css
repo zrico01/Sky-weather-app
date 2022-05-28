@@ -90,6 +90,15 @@ h4 {
   border: 1px solid #198754;
 }
 
+.updated {
+  text-align: left;
+  font-size: 15px;
+  margin: 0;
+}
+
+.update {
+  font-size: 15px;
+}
 .mainDate {
   font-size: 21px;
   color: rgb(90, 88, 88);

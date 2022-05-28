@@ -1,52 +1,57 @@
-//Feature 1
+//Time
 
-let now = new Date();
-let h3 = document.querySelector("h3");
+function formatDay(h3) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let currentDay = days[currentTime.getDay()];
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let currentMonth = months[currentTime.getMonth()];
+  let date = currentTime.getDate();
+  let hour = currentTime.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minutes = currentTime.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let year = currentTime.getFullYear();
 
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-let date = now.getDate();
-let hour = now.getHours();
-if (hour < 10) {
-  hour = `0${hour}`;
+  return `${currentDay}
+  ${currentMonth} ${date}, ${year} 
+  ${hour}:${minutes}`;
 }
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-let year = now.getFullYear();
-let currentDay = days[now.getDay()];
-let currentMonth = months[now.getMonth()];
 
-h3.innerHTML = `${currentDay} ${currentMonth} ${date}, ${year} ${hour}:${minutes}`;
+let showDay = document.querySelector("h3");
+let showDate = document.querySelector("#showDate");
+let showTime = document.querySelector("#showTime");
+let currentTime = new Date();
+showDay.innerHTML = formatDay(currentTime);
 
 //Search Engine
 
 function showTemperature(response) {
-  console.log(response);
   let cityName = document.querySelector("#city");
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
@@ -59,6 +64,7 @@ function showTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let wind = Math.round(response.data.wind.speed);
   let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
   cityName.innerHTML = response.data.name;
   temperatureElement.innerHTML = `${temperature}℃`;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -66,6 +72,11 @@ function showTemperature(response) {
   lowElement.innerHTML = `${low}℃`;
   humidityElement.innerHTML = `${humidity} %`;
   windElement.innerHTML = `${wind} mph`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function search(city) {
