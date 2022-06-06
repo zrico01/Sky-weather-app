@@ -193,19 +193,20 @@ a {
   font-weight: 400;
 }
 
-.col {
+.col-2 {
   text-align: center;
+  padding-right: 20px;
   border-right: 3px solid rgb(68, 66, 66);
   border-right-width: 1px;
 }
 
-.day {
+.weather-forecast-day {
   font-size: 15px;
   font-weight: 600;
   margin-top: 10px;
 }
 
-.date {
+.weather-forecast-date {
   font-size: 12px;
   font-weight: 400;
   margin: 4px auto;
@@ -218,8 +219,21 @@ a {
   margin: 6px auto 15px;
 }
 
-.weatherEmoji {
+.weather-forecast-img {
   font-size: 40px;
+}
+
+.weather-forecast-temperatures {
+  font-size: 10px;
+}
+
+.weather-forecast-temperature-max {
+  font-size: 10px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+  font-size: 10px;
 }
 
 .weather-temperature .active {
