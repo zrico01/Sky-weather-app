@@ -85,8 +85,7 @@ function displayForecast(response) {
                        forecastDay.weather[0].icon
                      }@2x.png" alt="" width=""/>  
                     </div>
-                     <div class="temp">
-                        65℉
+                     <div class="temp">${Math.round(forecastDay.temp.day)}°
                     </div>
                     <div class="weather-forecast-temperatures">
                       <span class="weather-forecast-temperature-max"> ${Math.round(
@@ -222,5 +221,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let celsiusTemperature = null;
-
-displayForecast();
