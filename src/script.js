@@ -171,7 +171,7 @@ searchForm.addEventListener("submit", handleSubmit);
 // Search current location
 function searchLocation(position) {
   let apiKey = "083fb480cb6a36ad12a576120a9c97c7";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(showTemperature);
 }
@@ -191,5 +191,3 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 search("Los Angeles");
-
-//Unit conversion

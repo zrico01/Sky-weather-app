@@ -2,6 +2,7 @@ body {
   margin: 10px;
 
   font-family: "Roboto", sans-serif;
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 
 h1 {
@@ -73,8 +74,11 @@ a {
 }
 
 .container {
-  max-width: 580px;
-  border: 40px;
+  max-width: 610px;
+  border: 2px solid rgb(208, 208, 216);
+  border-radius: 16px;
+  padding: 20px 46px 40px 30px;
+  background: #f3efef;
 }
 
 .locator {
@@ -226,12 +230,12 @@ a {
 }
 
 .weather-forecast-temperature-max {
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .weather-forecast-temperature-min {
   opacity: 0.6;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .weather-temperature .active {
