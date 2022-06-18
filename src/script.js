@@ -112,7 +112,7 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "083fb480cb6a36ad12a576120a9c97c7";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -136,8 +136,8 @@ function showTemperature(response) {
   cityName.innerHTML = response.data.name;
   temperatureElement.innerHTML = `${temperature}`;
   descriptionElement.innerHTML = response.data.weather[0].description;
-  highElement.innerHTML = `${high}℃`;
-  lowElement.innerHTML = `${low}℃`;
+  highElement.innerHTML = `${high}℉`;
+  lowElement.innerHTML = `${low}℉`;
   humidityElement.innerHTML = `${humidity} %`;
   windElement.innerHTML = `${wind} mph`;
   iconElement.setAttribute(
@@ -151,7 +151,7 @@ function showTemperature(response) {
 
 function search(city) {
   let apiKey = "083fb480cb6a36ad12a576120a9c97c7";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   let cityElement = document.querySelector("#city");
   let cityInput = document.querySelector("#input-city");
   cityElement.innerHTML = cityInput.value;
@@ -196,28 +196,3 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 search("Los Angeles");
 
 //Unit conversion
-
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
-let celsiusTemperature = null;
