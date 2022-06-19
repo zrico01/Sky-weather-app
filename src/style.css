@@ -59,6 +59,7 @@ a {
 
 .open-source {
   text-decoration: none;
+  color: #09203f;
 }
 .open-source:hover {
   text-decoration: underline;
@@ -71,6 +72,7 @@ a {
 }
 .coder:hover {
   text-decoration: underline;
+  color: #09203f;
 }
 
 .container {
@@ -78,7 +80,7 @@ a {
   border: 2px solid rgb(208, 208, 216);
   border-radius: 16px;
   padding: 20px 46px 40px 30px;
-  background: #f3efef;
+  background: linear-gradient(to top, #accef3 0%, white 100%);
 }
 
 .locator {
@@ -93,10 +95,10 @@ a {
   margin-left: 382px;
   margin-bottom: 30px;
   padding: 8px;
-  border: 1px solid #f8f9fa;
+  border: 1px solid #198754;
   border-radius: 5px;
   background: #f8f9fa;
-  color: rgb(90, 88, 88);
+  color: #198754;
   transition: all 200ms ease;
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
   cursor: pointer;
